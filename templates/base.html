@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{% block title %}StudentOverflow{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+<body>
+  <nav>
+    <a href="/">StudentOverflow</a>
+    <form action="/search"><input name="q" placeholder="Buscar..." /></form>
+    <a href="/q/ask">Preguntar</a>
+    <a href="/tags">Tags</a>
+    <a href="/auth/login">Entrar</a>
+  </nav>
+  <main>{% block content %}{% endblock %}</main>
+</body>
+</html>
