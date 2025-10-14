@@ -1,59 +1,97 @@
-# StudentOverflow
+# Student Overflow - Flask Q&A Platform
 
-Portal de preguntas y respuestas para estudiantes, inspirado en StackOverflow.
+A Stack Overflow-inspired Q&A platform for students, built with Flask. Features question posting, answering, voting, and community-driven knowledge sharing.
 
-## Objetivo
-Permitir que cualquier usuario publique preguntas sobre materias y que la comunidad aporte respuestas de calidad.
+## Overview
 
-## Stack
-- Python 3.11+
-- Flask + Jinja2
-- SQLAlchemy (SQLite en desarrollo)
-- WTForms (opcional) para formularios
+Student-focused Q&A portal with:
+- Question and answer system
+- User authentication
+- Voting mechanism
+- Tag-based categorization
+- Search functionality
+- User profiles
+- Reputation system
 
-## Cómo correr en local
+## Features
+
+- **Post Questions**: Students can ask questions about subjects
+- **Answer System**: Community provides answers
+- **Voting**: Upvote/downvote questions and answers
+- **Tags**: Categorize by subject/topic
+- **Search**: Find relevant questions
+- **User Profiles**: Track contributions and reputation
+- **Best Answer**: Mark accepted solutions
+
+## Tech Stack
+
+- **Framework**: Flask + Jinja2
+- **Database**: SQLAlchemy (SQLite for development)
+- **Forms**: WTForms (optional)
+- **Python**: 3.11+
+
+## Installation
+
 ```bash
-python -m venv .venv
-source .venv/bin/activate  # en Windows: .venv\Scripts\activate
+# Clone repository
+git clone <repository-url>
+cd project-flask-web-python_student-overflow
+
+# Create virtual environment
+python3 -m venv .venv
+source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Run application
 python app.py
 ```
 
-## Estructura pensada
-studentoverflow/
-├─ app.py
-├─ config.py
-├─ requirements.txt
-├─ README.md
-├─ .gitignore
-├─ studentoverflow/
-│  ├─ __init__.py
-│  ├─ models.py
-│  ├─ routes/
-│  │  ├─ __init__.py
-│  │  ├─ main.py          # home/feed, búsqueda
-│  │  ├─ auth.py          # login/registro
-│  │  ├─ questions.py     # CRUD preguntas/respuestas, votos
-│  │  └─ profile.py       # perfiles
-│  ├─ services/
-│  │  ├─ __init__.py
-│  │  ├─ search.py        # búsqueda simple + filtros/tags
-│  │  └─ notifications.py # stub para notificaciones
-│  ├─ forms.py            # WTForms (opcional)
-│  ├─ templates/
-│  │  ├─ base.html
-│  │  ├─ feed.html
-│  │  ├─ question_detail.html
-│  │  ├─ ask.html
-│  │  ├─ login.html
-│  │  ├─ register.html
-│  │  ├─ profile.html
-│  │  └─ tags.html
-│  └─ static/
-│     ├─ css/
-│     │  └─ main.css
-│     └─ js/
-│        └─ main.js
-└─ tests/
-   └─ test_smoke.py
+Access at `http://localhost:5000`
+
+## Project Structure
+
 ```
+studentoverflow/
+├── app.py
+├── config.py
+├── requirements.txt
+├── README.md
+├── studentoverflow/
+│   ├── __init__.py
+│   ├── models.py
+│   └── routes/
+│       └── main.py
+└── templates/
+    └── base.html
+```
+
+## Usage
+
+1. Register/Login
+2. Ask questions
+3. Browse questions by tags
+4. Answer questions
+5. Vote on content
+6. Build reputation
+
+## Database Models
+
+- **User**: Authentication and profiles
+- **Question**: Posted questions
+- **Answer**: Responses to questions
+- **Vote**: Voting system
+- **Tag**: Categorization
+
+## Contributing
+
+See CONTRIBUTING.md for guidelines.
+
+## License
+
+MIT License
+
+---
+
+**Knowledge Sharing Platform for Students** 🎓
